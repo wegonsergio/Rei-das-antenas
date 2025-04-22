@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rei das Antenas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVnUc6kF2KVK7K9DdAoQeRgP3DcDrtFZ8YNL9r9ts+muPOEYyIhVJ4+fT3OeM1D+6u2N7UjOvcr8GLWx9a0YVg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: #f5f5f5;
+      background-color: #f0f2f5;
       color: #333;
     }
     header {
@@ -18,7 +23,7 @@
       background-repeat: no-repeat;
       height: 100vh;
       color: white;
-      text-shadow: 1px 1px 2px black;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       padding: 60px 20px;
       text-align: center;
       display: flex;
@@ -27,7 +32,7 @@
       align-items: center;
     }
     nav {
-      background-color: #ff0000;
+      background-color: #e60000;
       padding: 10px;
       text-align: center;
     }
@@ -36,6 +41,13 @@
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a i {
+      margin-right: 5px;
+    }
+    nav a:hover {
+      color: #ffd700;
     }
     .container {
       padding: 20px;
@@ -45,7 +57,17 @@
       padding: 15px;
       margin: 10px 0;
       border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease;
+    }
+    .produto:hover, .servico:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
     }
     .produto img, .servico img {
       width: 100%;
@@ -56,20 +78,24 @@
     }
     .produto a {
       display: inline-block;
-      background-color: #25d366;
+      background: linear-gradient(to right, #25d366, #128c7e);
       color: white;
       padding: 10px 15px;
       border-radius: 5px;
       text-decoration: none;
       margin-top: 10px;
-      text-align: center;
+      transition: background 0.3s ease;
     }
-    .servicos-bg {
-      background-image: url('inicial rei das antenas.jpg');
+    .produto a:hover {
+      background: linear-gradient(to right, #128c7e, #075e54);
+    }
+    #servicos {
+      background-image: url('background-servicos.jpg');
       background-size: cover;
       background-position: center;
-      padding: 20px;
-      color: white;
+      background-repeat: no-repeat;
+      padding: 40px 20px;
+      color: #fff;
       text-shadow: 1px 1px 2px black;
     }
     footer {
@@ -83,6 +109,28 @@
       font-size: 18px;
       margin: 10px 0;
     }
+    .depoimentos {
+      background: #fff;
+      padding: 40px 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .depoimento {
+      margin-bottom: 20px;
+      font-style: italic;
+      border-left: 4px solid #e60000;
+      padding-left: 15px;
+      color: #555;
+    }
+    .mapa {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
@@ -92,53 +140,44 @@
   </header>
 
   <nav>
-    <a href="#produtos">Produtos</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contato">Contato</a>
+    <a href="#produtos"><i class="fas fa-tv"></i>Produtos</a>
+    <a href="#servicos"><i class="fas fa-wrench"></i>Serviços</a>
+    <a href="#contato"><i class="fas fa-phone"></i>Contato</a>
   </nav>
 
   <div class="container" id="produtos">
     <h2>Nossos Produtos</h2>
     <div class="produto">
       <h3>Cinebox</h3>
-      <img src="cinebox.jpg" alt="Cinebox">
+      <img src="cinebox.jfif" alt="Cinebox">
       <p>Decodificadores modernos com alta performance e qualidade.</p>
-      <a href="https://wa.me/5521982207675" target="_blank">Comprar pelo WhatsApp</a>
+      <a href="https://wa.me/5521982207675" target="_blank"><i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp</a>
     </div>
     <div class="produto">
       <h3>Alphasat</h3>
-      <img src="alphasat.jpg" alt="Alphasat">
+      <img src="alphasatt.webp" alt="Alphasat">
       <p>Ideal para quem busca estabilidade e funcionalidade em um só aparelho.</p>
-      <a href="https://wa.me/5521982207675" target="_blank">Comprar pelo WhatsApp</a>
+      <a href="https://wa.me/5521982207675" target="_blank"><i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp</a>
     </div>
     <div class="produto">
       <h3>Duosat</h3>
-      <img src="joys.jpg" alt="Duosat">
+      <img src="joy%20s.jfif" alt="Duosat">
       <p>Equipamentos com tecnologia de ponta para TV via satélite.</p>
-      <a href="https://wa.me/5521982207675" target="_blank">Comprar pelo WhatsApp</a>
+      <a href="https://wa.me/5521982207675" target="_blank"><i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp</a>
     </div>
     <div class="produto">
       <h3>Xplus</h3>
       <img src="xplus.webp" alt="Xplus TV Box">
       <p>TV Box com acesso aos melhores conteúdos online com qualidade HD.</p>
-      <a href="https://wa.me/5521982207675" target="_blank">Comprar pelo WhatsApp</a>
+      <a href="https://wa.me/5521982207675" target="_blank"><i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp</a>
     </div>
   </div>
 
-  <div class="container servicos-bg" id="servicos">
+  <div class="container" id="servicos">
     <h2>Alguns de Nossos Serviços</h2>
     <div class="servico">
-      <img src="https://via.placeholder.com/300x200?text=Instalacao+de+Antena" alt="Instalação de Antena">
+      <img src="eu.jpg" alt="Trabalho 1">
       <p>Instalação de antenas com precisão e qualidade.</p>
-    </div>
-    <div class="servico">
-      <img src="https://via.placeholder.com/300x200?text=Configura%C3%A7%C3%A3o+de+TV+Box" alt="Configuração de TV Box">
-      <p>Configuração completa e atualização de TV Box.</p>
-    </div>
-    <div class="servico">
-      <img src="https://via.placeholder.com/300x200?text=Suporte+T%C3%A9cnico" alt="Suporte Técnico">
-      <p>Suporte técnico especializado para todos os aparelhos vendidos.</p>
-      <p>Instalações em locais altos com total segurança e qualidade.</p>
     </div>
     <div class="servico">
       <img src="eu-1.jpg" alt="Trabalho 2">
@@ -146,13 +185,27 @@
     </div>
   </div>
 
+  <div class="container depoimentos">
+    <h2>O que nossos clientes dizem</h2>
+    <div class="depoimento">
+      "Excelente atendimento! Instalaram rapidinho e ficou perfeito. Recomendo muito!" — João M.
+    </div>
+    <div class="depoimento">
+      "Preço justo, serviço profissional e ótimo suporte no WhatsApp." — Carla T.
+    </div>
+  </div>
+
   <div class="container" id="contato">
     <h2>Contato</h2>
-    <p class="whatsapp">WhatsApp: <br>
+    <p class="whatsapp">
+      <i class="fab fa-whatsapp"></i> WhatsApp: <br>
       <a href="https://wa.me/5521982207675" target="_blank">(21) 98220-7675</a><br>
       <a href="https://wa.me/5521965329810" target="_blank">(21) 96532-9810</a>
     </p>
-    <p>Endereço: Rua Zeferino Agra, nº 200 - Duque de Caxias - RJ</p>
+    <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Zeferino Agra, nº 200 - Duque de Caxias - RJ</p>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.167810205517!2d-43.306899324663735!3d-22.90658807925848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99659f6edb26c3%3A0x47c4efce056e73f4!2sRua%20Zeferino%20Agra%2C%20200%20-%20Duque%20de%20Caxias%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1713715800000!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
 
   <footer>
