@@ -3,137 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Venda e instalação de antenas em Duque de Caxias. Produtos como Duosat, Xplus, Alphasat e mais. Atendimento rápido e profissional.">
-  <meta name="keywords" content="Antenas, TV Box, Duosat, Xplus, instalação de antena, Duque de Caxias">
   <title>Rei das Antenas</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+    html { scroll-behavior: smooth; }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
+      background-color: #f0f2f5;
       color: #333;
     }
     header {
-      background: linear-gradient(to right, #0033cc, #ff0000);
-      color: #fff;
-      padding: 20px;
+      background-image: url('inicial-rei-das-antenas.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      padding: 60px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav {
+      background-color: #e60000;
+      padding: 10px;
       text-align: center;
     }
-    header img {
-      width: 100px;
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
     .container {
       padding: 20px;
     }
-    .produto, .servico, .depoimento {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+    .produto {
+      background: white;
       padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    .produto img, .servico img {
+    .produto img {
       width: 100%;
       max-width: 300px;
       border-radius: 10px;
     }
-    .produto h3, .servico p, .depoimento p {
+    .produto p {
       margin: 10px 0;
     }
     .produto a {
       display: inline-block;
+      background: linear-gradient(to right, #25d366, #128c7e);
+      color: white;
       padding: 10px 15px;
-      background-color: #25D366;
-      color: #fff;
       border-radius: 5px;
       text-decoration: none;
       margin-top: 10px;
     }
-    .depoimento {
-      border-left: 5px solid #0033cc;
-      padding-left: 15px;
-    }
-    .estrelas {
-      color: #f1c40f;
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: #fff;
-      padding: 10px 15px;
-      border-radius: 50%;
-      font-size: 24px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #0033cc;
-      color: #fff;
-    }
-    iframe {
-      border-radius: 10px;
-    }
-    nav {
-      background-color: #fff;
-      padding: 10px 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #0033cc;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #ff0000;
-    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Rei das Antenas</h1>
-    <p>Seu especialista em instalação e equipamentos para TV</p>
+    <p>Especializada em Cinebox, Alphasat, Duosat, Xplus e muito mais!</p>
   </header>
 
   <nav>
-    <a href="#">Início</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contato">Contato</a>
+    <a href="#produtos"><i class="fas fa-tv"></i> Produtos</a>
+    <a href="#servicos"><i class="fas fa-wrench"></i> Serviços</a>
+    <a href="#contato"><i class="fas fa-phone"></i> Contato</a>
   </nav>
 
-  <div class="container">
+  <div class="container" id="produtos">
+    <h2>Nossos Produtos</h2>
+
+    <div class="produto">
+      <h3>Cinebox</h3>
+      <img src="cinebox.jpg" alt="Cinebox">
+      <p>Decodificadores modernos com alta performance e qualidade.</p>
+      <p style="font-size: 20px; font-weight: bold; color: #e60000;">R$ 750,00</p>
+      <a href="https://wa.me/5521982207675" target="_blank"><i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp</a>
+    </div>
+
+    <div class="produto">
+      <h3>Alphasat</h3>
+      <img src="alphasat.jpg" alt="Alphasat">
+      <p>Ideal para quem busca estabilidade e funcionalidade em um só aparelho.</p>
+      <p style="font-size: 20px; font-weight: bold; color: #e60000;">R$ 800,00</p>
+      <a href="https://wa.me/5521982207675" target="_blank"><i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp</a>
+    </div>
+
     <div class="produto">
       <h3>Duosat</h3>
       <img src="joys.jpg" alt="Duosat">
       <p>Equipamentos com tecnologia de ponta para TV via satélite.</p>
+      <p style="font-size: 20px; font-weight: bold; color: #e60000;">R$ 850,00</p>
       <a href="https://wa.me/5521982207675" target="_blank"><i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp</a>
     </div>
+
     <div class="produto">
       <h3>Xplus</h3>
       <img src="xplus.webp" alt="Xplus TV Box">
       <p>TV Box com acesso aos melhores conteúdos online com qualidade HD.</p>
+      <p style="font-size: 20px; font-weight: bold; color: #e60000;">R$ 600,00</p>
       <a href="https://wa.me/5521982207675" target="_blank"><i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp</a>
     </div>
-    <div class="produto">
-      <h3>Cinebox</h3>
-      <img src="cinebox.jpg" alt="Cinebox">
-      <p>Dispositivos de alta performance para recepção de canais via satélite.</p>
-      <a href="https://wa.me/5521982207675" target="_blank"><i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp</a>
-    </div>
-    <div class="produto">
-      <h3>Alphasat</h3>
-      <img src="alphasat.jpg" alt="Alphasat">
-      <p>Receptores de satélite com ótimo custo-benefício e qualidade garantida.</p>
-      <a href="https://wa.me/5521982207675" target="_blank"><i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp</a>
-    </div>
+
   </div>
 
+  <a class="whatsapp-float" href="https://wa.me/5521982207675" target="_blank" aria-label="Fale conosco no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>
+</div>
+    <div class="produto"
+    </div>
+    <div class="produto">
   <div class="container" id="servicos">
     <h2>Alguns de Nossos Serviços</h2>
     <div class="servico">
@@ -176,7 +188,6 @@
       <a href="https://wa.me/5521965329810" target="_blank">(21) 96532-9810</a>
     </p>
     <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Zeferino Agra, nº 200 - Duque de Caxias - RJ</p>
-    <p><i class="far fa-clock"></i> Horário de atendimento: Segunda a Sábado, das 8h às 18h</p>
     <div class="mapa">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.167810205517!2d-43.306899324663735!3d-22.90658807925848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99659f6edb26c3%3A0x47c4efce056e73f4!2sRua%20Zeferino%20Agra%2C%20200%20-%20Duque%20de%20Caxias%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1713715800000!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
